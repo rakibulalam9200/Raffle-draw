@@ -7,6 +7,7 @@ exports.readFile = async () => {
     return JSON.parse(data)
 }
 
-exports.writeFile = async () => {
+exports.writeFile = async (data) => {
+    // console.log(data)
     await fs.writeFile(dbPath,JSON.stringify(data));
 }

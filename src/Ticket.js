@@ -14,3 +14,5 @@ class Ticket {
         this.updatedAt = new Date();
     }
 }
+
+module.exports = Ticket;

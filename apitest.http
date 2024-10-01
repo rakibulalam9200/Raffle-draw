@@ -1,0 +1,24 @@
+GET http://localhost:4000/health
+
+###
+
+GET http://localhost:4000/api/v1/tickets
+
+###
+POST http://localhost:4000/api/v1/tickets
+Content-Type: application/json
+
+{
+    "username": "hera100",
+    "price": 100
+}
+
+###
+
+GET http://localhost:4000/api/v1/tickets/t/0wb8neyyO
+
+###
+GET http://localhost:4000/api/v1/tickets/u/rakibul9200
+
+###
+DELETE  http://localhost:4000/api/v1/tickets/t/Oof_wNlyE

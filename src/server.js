@@ -8,6 +8,9 @@ const app = express()
  */
 app.use([morgan('dev'),cors(),express.json()])
 
+// added routes
+app.use('/api/v1/tickets',require('./routes'))
+
 
 app.get('/health',(_req,res)=>{
   res.status(200).json({message: "Successs"})
@@ -20,6 +23,7 @@ app.use((_req,_res,next)=>{
 })
 
 app.use((error,_req,res,_next)=>{
+  console.log(error,"Error")
   if(error.status){
     return res.status(error.status).json({
       message: error.message
